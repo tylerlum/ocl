@@ -8,7 +8,7 @@
 #include <log4cxx/logger.h>
 #include <log4cxx/helpers/pool.h>
 #include <log4cxx/basicconfigurator.h>
-#include <log4cxx/net/socketappender.h>
+// #include <log4cxx/net/socketappender.h>
 #include <log4cxx/simplelayout.h>
 
 #if 0
@@ -48,23 +48,23 @@ protected:
 	virtual void updateHook();
 	virtual void cleanupHook();
 
-	log4cxx::helpers::Pool p;
-	log4cxx::net::SocketAppender * socketAppender;
-	log4cxx::helpers::InetAddressPtr address;
+	// log4cxx::helpers::Pool p;
+	// log4cxx::net::SocketAppender * socketAppender;
+	// log4cxx::helpers::InetAddressPtr address;
 
     /// Port we receive logging events on
     /// Initially unconnected. The logging service connects appenders.
-    RTT::InputPort<OCL::logging::LoggingEvent> log_port;
+    // RTT::InputPort<OCL::logging::LoggingEvent> log_port;
 
 	   /// Name of host to append to
-    std::string      hostname_prop;
+    // std::string      hostname_prop;
 
     /// The port where the logging server runs.
-    int port_prop;
+    // int port_prop;
     /**
      * Property to set maximum number of log events to pop per cycle
      */
-    int              maxEventsPerCycle_prop;
+    // int              maxEventsPerCycle_prop;
 
     /**
      * Maximum number of log events to pop per cycle
@@ -75,7 +75,7 @@ protected:
      * With enough event production, this could lead to thread
      * starvation!
      */
-    int                           maxEventsPerCycle;
+    // int                           maxEventsPerCycle;
 };
 
 // namespaces
