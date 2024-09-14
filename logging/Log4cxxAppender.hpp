@@ -8,7 +8,7 @@
 #include <log4cxx/logger.h>
 #include <log4cxx/helpers/pool.h>
 #include <log4cxx/basicconfigurator.h>
-#include <log4cxx/net/socketappender.h>
+#include <log4cxx/net/xmlsocketappender.h>
 #include <log4cxx/simplelayout.h>
 
 #if 0
@@ -49,7 +49,7 @@ protected:
 	virtual void cleanupHook();
 
 	log4cxx::helpers::Pool p;
-	log4cxx::net::SocketAppender * socketAppender;
+	log4cxx::net::XMLSocketAppender * socketAppender;
 	log4cxx::helpers::InetAddressPtr address;
 
     /// Port we receive logging events on

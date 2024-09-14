@@ -82,10 +82,10 @@ bool Log4cxxAppender::configureHook()
         delete socketAppender;
     }
 
-    net::SocketAppender::DEFAULT_RECONNECTION_DELAY = 3000; // 3s
+    net::XMLSocketAppender::DEFAULT_RECONNECTION_DELAY = 3000; // 3s
 
     socketAppender = new
-        log4cxx::net::SocketAppender( address, port_prop );
+        log4cxx::net::XMLSocketAppender( address, port_prop );
 
     socketAppender->activateOptions(p);
 
