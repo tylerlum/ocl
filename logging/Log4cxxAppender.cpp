@@ -37,7 +37,7 @@ namespace logging {
 
     spi::LoggingEventPtr tolog4cxx(logging::LoggingEvent const& e, log4cxx::helpers::Pool & pool)
     {
-        return spi::LoggingEventPtr(new spi::LoggingEvent(makeString( e.categoryName ), tolog4cxxLevel(e.priority), makeString( e.message ), log4cxx::spi::LocationInfo("filename", "functionname", 0)));
+        return spi::LoggingEventPtr(new spi::LoggingEvent(makeString( e.categoryName ), tolog4cxxLevel(e.priority), makeString( e.message ), log4cxx::spi::LocationInfo("filename", spi::LocationInfo::calcShortFileName("filename"), "functionname", 0)));
     }
 
 Log4cxxAppender::Log4cxxAppender(std::string name) :
